@@ -16,4 +16,4 @@ def loadConstantsFile(name, path):
     [values] is a json dictionary stored in a file found at [path].
     """
     with open(path, "r") as data:
-        return buildConstantsContainer(json.loads(data.read()))
+        return buildConstantsContainer(name, json.loads(data.read()))
